@@ -35,9 +35,15 @@ yarn-error.log*
 
 # vercel
 .vercel
+.env.vercel
 
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local test scripts
+test-iamport.js
+check-db.js
+output.html
 
 .vercel
