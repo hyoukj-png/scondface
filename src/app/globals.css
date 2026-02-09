@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+:root {
+  /* Tactical Dark Theme */
+  --gravity-nav: rgba(0, 0, 0, 0.6);
+  --gravity-border: rgba(255, 255, 255, 0.1);
+  
+  /* Tactical Dark Palette */
+  --aurora-start: #020617; /* Slate 950 */
+  --aurora-mid: #0f172a;   /* Slate 900 */
+  --aurora-end: #020617;   /* Slate 950 */
+  
+  /* Text */
+  --foreground: #f8fafc;   /* Slate 50 */
+}
+
+@theme {
+  --color-gravity-nav: var(--gravity-nav);
+  --color-gravity-border: var(--gravity-border);
+  --color-aurora-start: var(--aurora-start);
+  --color-aurora-mid: var(--aurora-mid);
+  --color-aurora-end: var(--aurora-end);
+  --color-foreground: var(--foreground);
+}
+
+body {
+  background: radial-gradient(circle at top, var(--aurora-mid) 0%, var(--aurora-start) 100%);
+  background-attachment: fixed;
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--gravity-border);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--gravity-border);
+}
